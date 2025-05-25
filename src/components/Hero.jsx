@@ -99,7 +99,7 @@ const Hero = () => {
           </motion.p>
           <motion.a href="resume.pdf" variants={springAnimation}>
             <motion.button className="home_button bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-6 py-2 text-base my-5">
-              Download CV
+              Download Resume
             </motion.button>
           </motion.a>
         </motion.div>

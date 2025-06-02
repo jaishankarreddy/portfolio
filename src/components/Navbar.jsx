@@ -103,22 +103,23 @@ const Navbar = () => {
             </div>
 
             {/* Mobile and Tablet Menu */}
-            {isMenuOpen && (
-              <div className="lg:hidden bg-gray-900/90 mt-2 rounded-xl flex flex-col items-center space-y-4 py-4">
-                {navItems.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => {
-                      scrollToSection(item.id);
-                      setIsMenuOpen(false);
-                    }}
-                    className={getButtonClass(item.isSpecial)}
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-            )}
+            <div
+              className={`lg:hidden bg-gray-900/90 mt-2 rounded-xl flex flex-col items-center space-y-4 py-4 transition-all duration-500 ease-in-out transform ${isMenuOpen ? 'max-h-[500px] opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-y-95 pointer-events-none'} origin-top`}
+              style={{ overflow: 'hidden' }}
+            >
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    scrollToSection(item.id);
+                    setIsMenuOpen(false);
+                  }}
+                  className={getButtonClass(item.isSpecial)}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
           </div>
         </nav>
       )}

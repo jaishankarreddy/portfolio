@@ -31,14 +31,14 @@ const Contact = () => {
     e.preventDefault();
     // Send email using EmailJS
     emailjs.send(
-      'service_qwfv9l2', // replace with your EmailJS service ID
-      'template_7wl187c', // replace with your EmailJS template ID
+      'service_qwfv9l2',
+      'template_7wl187c',
       {
-        from_name: formData.name,
-        from_email: formData.email,
+        name: formData.name,
+        email: formData.email,
         message: formData.message,
       },
-      'GJuzyyVA7nGue0_fy' // replace with your EmailJS public key
+      'GJuzyyVA7nGue0_fy'
     )
     .then((result) => {
       toast.success('Message sent successfully!', {
@@ -49,7 +49,20 @@ const Contact = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: 'colored',
+        style: {
+          background: '#fff',
+          color: '#2d3a4a',
+          borderRadius: '8px',
+          fontWeight: '500',
+          fontSize: '1.1rem',
+          boxShadow: '0 2px 12px 0 rgba(44,62,80,0.10)',
+          border: '1px solid #e0e6ed',
+          padding: '18px 24px',
+          minWidth: '320px',
+          maxWidth: '90vw',
+          margin: '0 auto',
+        },
+        icon: false
       });
       setFormData({ name: '', email: '', message: '' });
     }, (error) => {
@@ -61,7 +74,20 @@ const Contact = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: 'colored',
+        style: {
+          background: '#fff',
+          color: '#fe320a',
+          borderRadius: '8px',
+          fontWeight: '500',
+          fontSize: '1.1rem',
+          boxShadow: '0 2px 12px 0 rgba(44,62,80,0.10)',
+          border: '1px solid #e0e6ed',
+          padding: '18px 24px',
+          minWidth: '320px',
+          maxWidth: '90vw',
+          margin: '0 auto',
+        },
+        icon: false
       });
     });
   }

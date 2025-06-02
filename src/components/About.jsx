@@ -90,8 +90,8 @@ const About = () => {
         {/* CTA Button */}
         <button className="w-full group bg-gray-100 hover:bg-gray-200 rounded-lg p-4 transition-colors" ref={(el) => el && divs.current.push(el)}>
           <div className="flex items-center justify-between">
-            <a href="resume.pdf">
-            <button className="about_resume font-medium">View Full Resume</button>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <span className="about_resume font-medium">View Full Resume</span>
             </a>
             <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
           </div>

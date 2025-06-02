@@ -35,9 +35,9 @@ const Navbar = () => {
   };
 
   const getButtonClass = (isSpecial) => {
-    const baseClass = "text-white text-base";
+    const baseClass = "text-white text-base transition-colors duration-200 hover:text-orange-400";
     if (!isSpecial) return baseClass;
-    return `${baseClass} bg-orange-500 px-5 py-2 rounded-full ${isScrolled ? (isHovered ? "opacity-100" : "opacity-0") : "opacity-100"} transition-opacity duration-300`;
+    return `${baseClass} bg-orange-500 px-5 py-2 rounded-full ${isScrolled ? (isHovered ? "opacity-100" : "opacity-0") : "opacity-100"} transition-opacity duration-300 hover:bg-orange-600`;
   };
 
   return (
@@ -66,8 +66,8 @@ const Navbar = () => {
               </div>
 
               {/* Logo */}
-              <div className=" nav_js flex items-center space-x-1 text-white">
-                <span className="text-orange-500 text-2xl animate-bounce">●</span>
+              <div className="nav_js flex items-center space-x-1 text-white group">
+                <span className="text-orange-500 text-2xl animate-bounce transition-transform duration-200 group-hover:scale-150">●</span>
                 <span
                   className="nav_js font-bold text-2xl text-white cursor-pointer"
                   onClick={() => scrollToSection("home")}

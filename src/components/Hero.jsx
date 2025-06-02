@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Instagram } from "lucide-react";
-import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
   // State to trigger animation on page load
@@ -61,7 +61,7 @@ const Hero = () => {
       {isAnimating && (
         <motion.div
           key="right-section"
-          className="right w-full md:w-1/2 space-y-4 text-center md:text-left"
+          className="right w-full md:w-3/5 lg:w-2/3 space-y-4 text-center md:text-left"
           variants={containerVariants}
           initial="initial"
           animate="animate"
@@ -76,8 +76,18 @@ const Hero = () => {
             className="name text-4xl md:text-5xl font-bold py-2 text-orange-500 text-shadow"
             variants={springAnimation}
           >
-            <span className="i_am text-black">I'm</span>
-            <p className="my_name md:ml-20 mt-1">Jaishankar Reddy</p>
+            <span className="i_am text-black block">I'm</span>
+            <span className="my_name md:ml-20 mt-1 text-orange-500 block">
+              <Typewriter
+                words={['Jaishankar Reddy']}
+                loop={false}
+                cursor
+                cursorStyle="|"
+                typeSpeed={80}
+                deleteSpeed={50}
+                delaySpeed={2000}
+              />
+            </span>
           </motion.h1>
           <motion.h1
             className="full_stack text-2xl md:text-3xl font-bold pb-2"
@@ -97,9 +107,9 @@ const Hero = () => {
             both front-end and back-end development, prioritizing user
             experience and efficiency.
           </motion.p>
-          <motion.a href="resume.pdf" variants={springAnimation}>
+          <motion.a href="/resume.pdf" target="_blank" rel="noopener noreferrer" variants={springAnimation}>
             <motion.button className="home_button bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-6 py-2 text-base my-5">
-              Download Resume
+              View Full Resume
             </motion.button>
           </motion.a>
         </motion.div>
@@ -129,28 +139,14 @@ const Hero = () => {
           <motion.div className="social_media_container flex space-x-6 mt-6 md:mt-10">
             <motion.a
               variants={iconAnimation}
-              href="#"
+              href="https://github.com/jaishankarreddy"
               className="hover:text-orange-500"
             >
-              <FaFacebook className="social_media h-6 w-6 md:h-5 md:w-5" />
+              <FaGithub className="social_media h-6 w-6 md:h-5 md:w-5" />
             </motion.a>
             <motion.a
               variants={iconAnimation}
-              href="#"
-              className="hover:text-orange-500"
-            >
-              <FaTwitter className="social_media h-6 w-6 md:h-5 md:w-5" />
-            </motion.a>
-            <motion.a
-              variants={iconAnimation}
-              href="#"
-              className="hover:text-orange-500"
-            >
-              <Instagram className="social_media h-6 w-6 md:h-5 md:w-5" />
-            </motion.a>
-            <motion.a
-              variants={iconAnimation}
-              href="https://www.linkedin.com/in/jai-shankar-9a65ab314"
+              href="https://www.linkedin.com/in/jaishankar-reddy-9a65ab314"
               className="hover:text-orange-500"
             >
               <FaLinkedin className="social_media h-6 w-6 md:h-5 md:w-5" />

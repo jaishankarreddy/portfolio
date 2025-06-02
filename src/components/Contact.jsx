@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from "react";
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react'
 import CustomHook from "./CustomHook";
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -25,15 +28,47 @@ const Contact = () => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData)
-    // Reset form after submission
-    setFormData({ name: '', email: '', message: '' })
+    e.preventDefault();
+    // Send email using EmailJS
+    emailjs.send(
+      'service_qwfv9l2', // replace with your EmailJS service ID
+      'template_7wl187c', // replace with your EmailJS template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      'GJuzyyVA7nGue0_fy' // replace with your EmailJS public key
+    )
+    .then((result) => {
+      toast.success('Message sent successfully!', {
+        position: 'top-center',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      });
+      setFormData({ name: '', email: '', message: '' });
+    }, (error) => {
+      toast.error('Failed to send message. Please try again.', {
+        position: 'top-center',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      });
+    });
   }
 
   return (
     <div className="min-h-screen  mt-10  max-w-6xl m-auto bg-white text-black mb-20" ref={scrollTab} >
+      <ToastContainer />
       <div className="container mx-auto px-4 py-16" >
         <h1 className="sm:text-5xl text-3xl flex justify-center font-bold mb-16 sd:mb-20 text-orange-500 " ref={(el) => el && divs.current.push(el)}> <span className="text-black mr-3">Contact</span> Me</h1>
         <div className="grid md:grid-cols-2 gap-14 bg-gray-200 p-10 rounded-3xl contact_us ">

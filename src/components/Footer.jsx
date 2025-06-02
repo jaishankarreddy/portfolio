@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   const scrollToSection = (sectionId) => {
@@ -42,18 +42,12 @@ const Footer = () => {
 
 
           <div className=" flex justify-center gap-4 mb-6">
-            <button href="#" className="text-gray-600 hover:text-orange-500">
-              <Facebook className="h-5 w-5" />
-            </button>
-            <button href="#" className="text-gray-600 hover:text-orange-500">
-              <Twitter className="h-5 w-5" />
-            </button>
-            <button href="#" className="text-gray-600 hover:text-orange-500">
-              <Instagram className="h-5 w-5" />
-            </button>
-            <button href="#" className="text-gray-600 hover:text-orange-500">
-              <Linkedin className="h-5 w-5" />
-            </button>
+            <a href="https://github.com/jaishankarreddy" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500">
+              <FaGithub className="h-5 w-5" />
+            </a>
+            <a href="https://www.linkedin.com/in/jaishankar-reddy-9a65ab314" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500">
+              <FaLinkedin className="h-5 w-5" />
+            </a>
           </div>
           <p className="text-xs text-gray-600">
             © 2024 <span className="text-orange-500">Jaishankar</span> All

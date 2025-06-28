@@ -54,7 +54,7 @@ const Projects = () => {
       mission: "Front-end, Back_end, UI/UX design",
       language: "HTML, CSS, React JS, Node JS",
       images: "images/poster_website.png",
-      link: "https://jaishankarreddy.github.io/e-comm/",
+      link: "https://e-comm-frontend-og8j.onrender.com",
     },
     {
       name: "Sundowns Studio website",

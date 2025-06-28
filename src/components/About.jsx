@@ -20,21 +20,7 @@ const About = () => {
               className="mx-auto w-full max-w-xs my-8 sm:my-12"
             />
           </div>
-          {/* <div className="space-y-4 sm:space-y-6 order-2 lg:order-none">
-            <h3 className='text-gray-800 font-bold text-3xl sm:text-4xl pt-3 sm:pt-5' ref={(el) => el && divs.current.push(el)}>I'm Jaishankar</h3>
-            <h3 className='text-gray-800 font-bold text-xl sm:text-2xl pb-1 sm:pb-2' ref={(el) => el && divs.current.push(el)}>Software Engineer</h3>
-            <h4 className="text-gray-600 max-w-xl text-sm sm:text-base font-medium" ref={(el) => el && divs.current.push(el)}>
-              I am a Software Engineer based in Bangalore, India. I am very passionate about improving my coding skills, developing web applications & websites. I build web apps and websites using MERN Stack. Love to build Full-Stack applications.
-            </h4>
-            <div className='flex flex-col sm:flex-row sm:items-center' ref={(el) => el && divs.current.push(el)}>
-              <p className="text-orange-500 text-sm sm:text-base font-bold">Email : </p>
-              <span className="text-gray-900 text-sm sm:text-base font-medium sm:ml-2">jaishankar63663@gmail.com</span>
-            </div>
-            <div className='flex flex-col sm:flex-row sm:items-center' ref={(el) => el && divs.current.push(el)}>
-              <p className="text-orange-500 text-sm sm:text-base font-bold">Place : </p>
-              <span className="text-gray-900 text-sm sm:text-base font-medium sm:ml-2">Bangalore, Karnataka, India, 560062</span>
-            </div>
-          </div> */}
+       
 
           
 
@@ -71,7 +57,7 @@ const About = () => {
             <div>
               <p className="about_contact_hedings text-sm  text-muted-foreground">Email</p>
               <a href="mailto:jaishankar33@gmail.com" className="about_contact_content text-sm font-medium hover:text-primary">
-                jaishankar6366@gmail.com
+                jaishankar63663@gmail.com
               </a>
             </div>
           </div>

@@ -47,7 +47,7 @@ const Work_experience = () => {
           },
           {
             company: "JSpiders Basavanagudi, Bangalore-04",
-            period: "Feb 2025 - Jun 2025",
+            period: "Feb 2025 - Jul 2025",
             role: "MERN Stack",
             dotColor: "bg-gray-400",
             discription:

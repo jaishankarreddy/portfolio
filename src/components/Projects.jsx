@@ -18,22 +18,19 @@ const Projects = () => {
     const elements = gsap.utils.toArray(".scroll-up");
 
     elements.forEach((element, index) => {
-      const isOdd = index % 2 !== 0; // Check if the index is odd
+      const fromX = index % 2 === 0 ? 100 : -100;
 
       gsap.fromTo(
         element,
         {
-          // Starting state based on even/odd index
-          x: isOdd ? -100 : 0, // Right to left for odd, left to right for even
+          x: fromX,
           opacity: 0,
-          blur: "20px",
           filter: "blur(10px)",
         },
         {
-          // Ending state
           x: 0,
-          filter: "blur(0px)",
           opacity: 1,
+          filter: "blur(0px)",
           duration: 1,
           ease: "power1.inOut",
           scrollTrigger: {
@@ -66,11 +63,19 @@ const Projects = () => {
     },
     {
       name: "Website Hero Page",
-      des: "user-friendly interface with rich media and vibrant visuals, This project highlights my skills in replicating immersive design elements and delivering a visually captivating user experience.",
+      des: "User-friendly interface with rich media and vibrant visuals. This project highlights my skills in replicating immersive design elements and delivering a visually captivating user experience.",
       mission: "Front-end, User-friendly interface",
       language: "HTML, CSS, React JS",
       images: "images/earth.png",
       link: "https://jaishankarreddy.github.io/Poster-Website-Hero-page/",
+    },
+    {
+      name: "Spline 3D Model Integration",
+      des: "Created a landing page that integrates a real-time interactive 3D model using Spline. This project showcases how 3D elements can enhance web design and user experience by embedding them seamlessly within a front-end layout.",
+      mission: "Front-end, UI/UX, 3D Model Integration",
+      language: "HTML, CSS, Spline",
+      images: "images/spline_3d.png",
+      link: "https://jaishankarreddy.github.io/spline/",
     },
   ]);
 
@@ -86,7 +91,10 @@ const Projects = () => {
       >
         My<span className="text-orange-500">Projects</span>
       </div>
-      <div className="des project_disc" ref={(el) => el && divs.current.push(el)}>
+      <div
+        className="des project_disc"
+        ref={(el) => el && divs.current.push(el)}
+      >
         {/* 20 */}
         These are some of my unique projects, creating responsive user
         interfaces and efficient back-end systems. My expertise ensures
@@ -94,10 +102,17 @@ const Projects = () => {
       </div>
       <div className="list">
         {listProjects.map((value, key) => (
-          <div className="item scroll-up" key={key}>
+          <div
+            className={`item scroll-up ${key % 2 !== 0 ? "reverse" : ""}`}
+            key={key}
+          >
             <a href={value.link}>
               <div className="images ">
-                <img className="project_image" src={value.images}  alt="3D Avatar" />
+                <img
+                  className="project_image"
+                  src={value.images}
+                  alt="3D Avatar"
+                />
               </div>
             </a>
             <div className="content">

@@ -1,0 +1,7 @@
+<div
+            key={key}
+            className="scroll-up flex flex-col md:flex-row gap-10 mb-16 items-center"
+            style={{
+              flexDirection: key % 2 === 0 ? "row" : "row-reverse",
+            }}
+          >

@@ -305,7 +305,7 @@ section {
     height: 100px;
     width: auto;
   }
-  
+
   .work_section {
     width: 100%;
     margin: auto;
@@ -345,11 +345,6 @@ section {
     font-size: 12px;
     gap: 15px;
   }
-
-
-
-
-
 
   section.skills {
     & .des {
@@ -424,8 +419,6 @@ section {
       }
     }
   }
-
-  
 }
 
 section.projects {
@@ -445,7 +438,6 @@ section.projects {
     margin-top: 10px;
     max-width: 1100px;
     margin: auto;
-    width: 100%; /* Adjust to fit screen */
 
     & .item {
       display: grid;
@@ -453,10 +445,9 @@ section.projects {
       justify-content: space-between;
       align-items: center;
       margin-bottom: 80px;
-      gap: 50px;
+      gap: 30px;
 
       & .images {
-        width: 90%; /* Adjust image container width */
         background-image: linear-gradient(
           -40deg,
           rgba(28, 32, 255, 0.952),
@@ -467,8 +458,8 @@ section.projects {
         border-radius: 20px;
 
         & img {
-          width: 100%; /* Adjust image size */
-          height: 100%; /* Maintain aspect ratio */
+          width: 100%;
+          height: 100%;
           max-height: 250px;
           border-radius: 10px;
           box-shadow: 0 20px 40px #010824;
@@ -511,17 +502,13 @@ section.projects {
       }
     }
 
-    & .item:nth-child(2) {
-      & .images {
-        grid-column-start: 3;
-        grid-column-end: 2;
-      }
+    & .item.reverse {
+      direction: rtl;
+    }
 
-      & .content {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-      }
+    & .item.reverse .images,
+    & .item.reverse .content {
+      direction: ltr;
     }
   }
 

@@ -10,16 +10,14 @@ import { ReactLenis } from "lenis/react";
 import Navbar from "./components/Navbar";
 import GoToTop from "./components/GoToTop";
 function App() {
-
   return (
     <ReactLenis root>
       <div className="app_class min-h-screen" style={{ fontFamily: "Poppins" }}>
-
         {/* <ThreeDModel1></ThreeDModel1> */}
         <Navbar />
-          <div id="home" className="pt-1">
-            <Hero />
-          </div>
+        <div id="home" className="pt-1">
+          <Hero />
+        </div>
 
         <div id="about" className="pt-12">
           <About />
@@ -33,19 +31,16 @@ function App() {
           <Work_eaperience />
         </div>
 
-        <div id="project" >
+        <div id="project">
           <Projects />
         </div>
-        
+
         <div id="contact" className="pt-1">
           <Contact />
         </div>
         <Footer />
-       
-        <GoToTop/>
-       
-       
-        
+
+        <GoToTop />
       </div>
     </ReactLenis>
   );

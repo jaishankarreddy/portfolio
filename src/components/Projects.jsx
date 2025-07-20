@@ -46,6 +46,14 @@ const Projects = () => {
 
   const [listProjects] = useState([
     {
+      name: "Farm to Market – Agritech Marketplace (Final Year Project)",
+      des: "Developed a full-stack agritech marketplace that connects farmers with consumers. The platform features real-time product listings, buyer-to-farmer chat, role-based dashboards, and secure checkout functionality, providing a seamless farm produce buying experience.",
+      mission: "Full Stack Development, Agritech, E-commerce",
+      language: "MongoDB, Express.js, React.js, Node.js, Tailwind CSS",
+      images: "images/farm_to_market.png",
+      link: "https://farm2market-nu.vercel.app/",
+    },
+    {
       name: "Posters E-Commerce Web Site",
       des: "Developed an e-commerce website for poster sales, Including admin interface, featuring a responsive design, and a user-friendly interface for seamless browsing, selection, and purchase of products.",
       mission: "Front-end, Back_end, UI/UX design",
@@ -137,16 +145,20 @@ const Projects = () => {
                 </div>
                 <div>
                   <h4>Languages</h4>
-                  <div className="text-gray-500 font-semibold text-sm ">
-                    {value.language}{" "}
-                    <a href={value.link}>
-                      <button className=" ml-52 bg-gray-200 hover:bg-orange-500 text-white rounded-xl px-3 py-2 sm:px-5 sm:py-3   text-base ">
+                  <div className="flex items-center justify-between text-gray-500 font-semibold text-sm">
+                    <span>{value.language}</span>
+                    <a
+                      href={value.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-gray-200 hover:bg-orange-500 text-white rounded-xl px-3 py-2 sm:px-5 sm:py-3 text-base">
                         <FontAwesomeIcon
                           style={{ color: "black" }}
                           icon={faLink}
                         />
                       </button>
-                    </a>{" "}
+                    </a>
                   </div>
                 </div>
               </div>

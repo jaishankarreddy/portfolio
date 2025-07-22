@@ -16,26 +16,25 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Projects = () => {
   useGSAP(() => {
     const elements = gsap.utils.toArray(".scroll-up");
-
     elements.forEach((element, index) => {
-      const fromX = index % 2 === 0 ? 100 : -100;
-
+      const isOdd = index % 2 !== 0;
       gsap.fromTo(
         element,
         {
-          x: fromX,
+          x: isOdd ? -100 : 0,
           opacity: 0,
+          blur: "20px",
           filter: "blur(10px)",
         },
         {
           x: 0,
-          opacity: 1,
           filter: "blur(0px)",
+          opacity: 1,
           duration: 1,
           ease: "power1.inOut",
           scrollTrigger: {
             trigger: element,
-            start: "bottom 120%",
+            start: "bottom 140%",
             end: "bottom 95%",
             scrub: true,
           },
@@ -125,7 +124,7 @@ const Projects = () => {
             </a>
             <div className="content">
               <h3 className="font-bold ">{value.name}</h3>
-              <div className=" my-5 sm:my-5  text-gray-800 text-sm sm:text-base   font-medium  ">
+              <div className=" my-5 sm:my-5  text-gray-800 text-sm sm:text-base font-medium  ">
                 {value.des}
               </div>
               <div className="mission">

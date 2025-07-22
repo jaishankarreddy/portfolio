@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { Typewriter } from 'react-simple-typewriter';
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   // State to trigger animation on page load
   const [isAnimating, setIsAnimating] = useState(false);
 
-  
   // Reset animation on component mount
   useEffect(() => {
     setIsAnimating(false);
@@ -73,22 +72,23 @@ const Hero = () => {
             Hi There,
           </motion.h2>
           <motion.h1
-            className="name text-4xl md:text-5xl font-bold py-2 text-orange-500 text-shadow"
+            className="name text-2xl md:text-5xl font-bold py-2 text-orange-500 text-shadow"
             variants={springAnimation}
           >
             <span className="i_am text-black block">I'm</span>
-            <span className="my_name md:ml-20 mt-1 text-orange-500 block">
+            <span className="my_name sm:ml-10 md:ml-20 mt-1 text-orange-500 block">
               <Typewriter
-                words={['Jaishankar Reddy']}
+                words={["Jaishankar Reddy"]}
                 loop={false}
                 cursor
                 cursorStyle="|"
                 typeSpeed={80}
                 deleteSpeed={50}
-                delaySpeed={2000}
+                delaySpeed={3000}
               />
             </span>
           </motion.h1>
+
           <motion.h1
             className="full_stack text-2xl md:text-3xl font-bold pb-2"
             variants={springAnimation}
@@ -102,12 +102,17 @@ const Hero = () => {
             className="hero_disc text-gray-700 max-w-xl text-sm font-medium md:text-base pb-2 mx-auto md:mx-0"
             variants={springAnimation}
           >
-          Full Stack Web Developer specializing in the MERN stack, with
+            Full Stack Web Developer specializing in the MERN stack, with
             expertise in creating responsive, scalable applications. I focus on
             both front-end and back-end development, prioritizing user
             experience and efficiency.
           </motion.p>
-          <motion.a href="/resume.pdf" target="_blank" rel="noopener noreferrer" variants={springAnimation}>
+          <motion.a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={springAnimation}
+          >
             <motion.button className="home_button bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-6 py-2 text-base my-5">
               View Full Resume
             </motion.button>
@@ -128,7 +133,6 @@ const Hero = () => {
             variants={imageAnimation}
             className="home_img relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full border-8 border-white overflow-hidden shadow-lg"
           >
-            
             <img
               src={"images/myImg.jpg"}
               alt="Profile"

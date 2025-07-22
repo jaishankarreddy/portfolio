@@ -231,14 +231,12 @@ section {
     font-weight: 700;
   }
   .i_am {
-    font-size: 28px;
     padding-right: 6px;
   }
   .hi_there {
     margin-bottom: -10px;
   }
   .my_name {
-    font-size: 29px;
     width: 90%;
 
     display: contents;

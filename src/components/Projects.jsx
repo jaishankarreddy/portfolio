@@ -91,7 +91,7 @@ const Projects = () => {
   CustomHook(scrollTab, divs);
 
   return (
-    <section className="projects " ref={scrollTab}>
+    <section className="projects" ref={scrollTab}>
       <div
         className=" text-3xl md:text-5xl font-bold mb-8 flex justify-center gap-3"
         ref={(el) => el && divs.current.push(el)}

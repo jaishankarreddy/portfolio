@@ -93,7 +93,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="min-h-screen  mt-10  max-w-6xl m-auto bg-white text-black mb-20" ref={scrollTab} >
+    <div className="min-h-screen  mt-32  max-w-6xl m-auto bg-white text-black mb-0" ref={scrollTab} >
       <ToastContainer />
       <div className="container mx-auto px-4 py-16" >
         <h1 className="sm:text-5xl text-3xl flex justify-center font-bold mb-16 sd:mb-20 text-orange-500 " ref={(el) => el && divs.current.push(el)}> <span className="text-black mr-3">Contact</span> Me</h1>

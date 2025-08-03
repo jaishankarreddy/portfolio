@@ -8,7 +8,7 @@ const About = () => {
   CustomHook(scrollTab, divs);
   return (
     <>
-      <section className="about_section mx-auto max-w-6xl py-8 sm:py-15 relative mb-10 sm:mb-20 -mt-4 sm:-mt-8 px-4 sm:px-6 lg:px-8" ref={scrollTab}>
+      <section className="about_section mx-auto max-w-6xl py-8 sm:py-15 relative px-4 sm:px-6 lg:px-8 " ref={scrollTab}>
         {/* <h2 className="text-3xl sm:text-5xl font-bold justify-center items-center mb-5 sm:mb-7 flex gap-3" ref={(el) => el && divs.current.push(el)}>
           About<span className="text-orange-500"> Me</span>
         </h2> */}
@@ -20,10 +20,7 @@ const About = () => {
               className="mx-auto w-full max-w-xs my-8 sm:my-12"
             />
           </div>
-       
-
           
-
 <div className="px-4 py-8 bg-background"  >
       <div className="max-w-full mx-auto space-y-8">
         {/* Header */}

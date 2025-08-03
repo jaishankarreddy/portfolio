@@ -8,7 +8,7 @@ const Work_experience = () => {
 
   return (
     <section
-      className="work_section mx-auto mt-20 max-w-4xl  px-4 pt-20 work_exp"
+      className="work_section mx-auto mt-20 max-w-4xl px-4 pt-20 work_exp"
       ref={scrollTab}
     >
       <h2
@@ -31,7 +31,7 @@ const Work_experience = () => {
           {
             company: "Colt Assist Pvt Limited, Bangalore-61",
             period: "Oct 2023 - Nov 2023",
-            role: "Java Fill-Stack Developer.",
+            role: "Java Full-Stack Developer.",
             dotColor: "bg-gray-400 ",
             discription:
               "Internship on Java Full Stack Web Development, where I gained hands-on experience in building responsive front-end interfaces and efficient back-end solutions with Java.",

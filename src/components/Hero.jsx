@@ -55,7 +55,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero relative z-10 mx-auto max-w-6xl px-5 py-10 md:py-20 flex flex-col-reverse md:flex-row gap-8 items-center min-h-svh mt-12 -mb-10 m-full">
+    <section className="hero relative z-10 mx-auto max-w-6xl px-5 py-10 md:py-20 flex flex-col-reverse md:flex-row gap-8 items-center min-h-svh mt-12 -mb-28 m-full">
       {/* Content Section */}
       {isAnimating && (
         <motion.div

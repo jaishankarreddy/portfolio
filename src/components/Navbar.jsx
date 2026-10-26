@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { scrollToSection as lenisGo } from "../lib/scroll";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,20 +26,21 @@ const Navbar = () => {
     { id: "home", label: "Home", isSpecial: true },
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
+    { id: "company-work", label: "Work", rightSide: true },
     { id: "experience", label: "Experience", rightSide: true },
-    { id: "project", label: "Project", rightSide: true },
+    { id: "projects", label: "Projects", rightSide: true },
     { id: "contact", label: "Contact", rightSide: true },
   ];
 
   const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    lenisGo(sectionId);
   };
 
   const getButtonClass = (isSpecial) => {
     const baseClass =
-      "text-white text-base transition-colors duration-200 hover:text-orange-400";
+      "text-white text-sm font-medium transition-colors duration-200 hover:text-orange-400";
     if (!isSpecial) return baseClass;
-    return `${baseClass} bg-orange-500 px-5 py-2 rounded-full ${
+    return `${baseClass} bg-orange-500 px-4 py-1.5 rounded-full ${
       isScrolled ? (isHovered ? "opacity-100" : "opacity-0") : "opacity-100"
     } transition-opacity duration-300 hover:bg-orange-600`;
   };
@@ -57,7 +59,7 @@ const Navbar = () => {
           />
 
           <div className="nav_bg mx-auto max-w-6xl backdrop-blur-0">
-            <div className="nav_container bg-gray-900/90 rounded-full px-4 sm:px-7 py-4 flex items-center justify-between relative">
+            <div className="nav_container bg-gray-900/90 rounded-full px-4 sm:px-6 py-2.5 flex items-center justify-between relative">
               {/* Left Navigation Items */}
               <div className="hidden lg:flex items-center space-x-4 xl:space-x-10">
                 {navItems
@@ -75,11 +77,11 @@ const Navbar = () => {
 
               {/* Logo */}
               <div className="nav_js flex items-center space-x-1 text-white group">
-                <span className="text-orange-500 text-2xl animate-bounce transition-transform duration-200 group-hover:scale-150">
+                <span className="text-orange-500 text-xl animate-bounce transition-transform duration-200 group-hover:scale-150">
                   ●
                 </span>
                 <span
-                  className="nav_js font-bold text-2xl text-white cursor-pointer"
+                  className="nav_js font-bold text-xl text-white cursor-pointer"
                   onClick={() => scrollToSection("home")}
                 >
                   JS
@@ -112,7 +114,7 @@ const Navbar = () => {
 
               {/* Hamburger Menu for Mobile and Tablet */}
               <button
-                className="hand_burger lg:hidden text-white text-2xl"
+                className="hand_burger lg:hidden text-white text-xl"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Toggle menu"
               >
@@ -122,7 +124,7 @@ const Navbar = () => {
 
             {/* Mobile and Tablet Menu */}
             <div
-              className={`lg:hidden bg-gray-900/90 mt-2 rounded-xl flex flex-col items-center space-y-4 py-4 transition-all duration-500 ease-in-out transform ${
+              className={`lg:hidden bg-gray-900/90 mt-2 rounded-xl flex flex-col items-center space-y-3 py-3 transition-all duration-500 ease-in-out transform ${
                 isMenuOpen
                   ? "max-h-[500px] opacity-100 scale-y-100"
                   : "max-h-0 opacity-0 scale-y-95 pointer-events-none"

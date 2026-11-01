@@ -100,7 +100,7 @@ export default function Footer() {
           <p className="text-[11px] text-gray-500">
             © {new Date().getFullYear()} <span className="text-orange-400 font-semibold">{profile.name}</span> · All rights reserved
           </p>
-          <p className="text-[11px] text-gray-600">Built with React, Tailwind CSS & Three.js</p>
+          <p className="text-[11px] text-gray-600">Built with React, Tailwind CSS &amp; Framer Motion</p>
           <button onClick={top} aria-label="Back to top"
             className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white hover:-translate-y-1 transition-all">
             <FaArrowUp className="w-3.5 h-3.5" />

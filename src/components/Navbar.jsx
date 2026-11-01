@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import { scrollToSection as lenisGo } from "../lib/scroll";
 
 const Navbar = () => {
@@ -112,14 +113,23 @@ const Navbar = () => {
                   ))}
               </div>
 
-              {/* Hamburger Menu for Mobile and Tablet */}
-              <button
-                className="hand_burger lg:hidden text-white text-xl"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label="Toggle menu"
-              >
-                {isMenuOpen ? "✖" : "☰"}
-              </button>
+              {/* Mobile / tablet actions */}
+              <div className="flex items-center gap-2 lg:hidden">
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="rounded-full bg-orange-500 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-orange-600"
+                >
+                  Let&apos;s talk
+                </button>
+                <button
+                  className="hand_burger flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                  aria-expanded={isMenuOpen}
+                >
+                  {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                </button>
+              </div>
             </div>
 
             {/* Mobile and Tablet Menu */}

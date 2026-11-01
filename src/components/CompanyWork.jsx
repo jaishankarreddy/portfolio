@@ -160,7 +160,7 @@ function ProductCard({ w, index }) {
 
 export default function CompanyWork() {
   return (
-    <section id="company-work" className="relative overflow-hidden py-14 bg-gradient-to-b from-white via-orange-50/50 to-white">
+    <section id="company-work" className="relative overflow-hidden py-16 bg-gradient-to-b from-white via-orange-50/50 to-white sm:py-20">
       <div className="absolute inset-0 hero-grid opacity-40" />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

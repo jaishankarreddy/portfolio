@@ -6,7 +6,7 @@ import { experienceTimeline } from "../data/portfolio";
 const Work_experience = () => {
   return (
     <section
-      className="work_section mx-auto mt-10 max-w-6xl px-4 pt-10 work_exp"
+      className="work_section mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 work_exp"
     >
       <div>
         <SectionHeading
@@ -20,7 +20,7 @@ const Work_experience = () => {
       <div className="relative">
         {/* gradient spine */}
         <div className="absolute left-4 md:left-1/2 top-1 bottom-1 w-0.5 bg-gradient-to-b from-orange-500 via-orange-200 to-gray-200 md:transform md:-translate-x-1/2 rounded-full" />
-        <div className="absolute left-4 md:left-1/2 top-1 md:transform md:-translate-x-1/2 -translate-x-[5px] w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_16px_rgba(249,115,22,0.8)]" />
+        <div className="absolute left-4 md:left-1/2 top-1 md:transform md:-translate-x-1/2 -translate-x-[5px] w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_16px_rgba(249,115,22,0.8)] hidden md:block" />
 
         {experienceTimeline.map((experience, index) => {
           const featured = index === 0;

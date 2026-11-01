@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
 import {
   SiAngular,
   SiReact,
@@ -59,21 +60,21 @@ function SkillTile({ skill, muted }) {
       viewport={{ once: true, margin: "-20px" }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -3 }}
-      className={`flex items-center gap-2.5 rounded-xl border px-3.5 py-3 transition-shadow hover:shadow-md ${
+      className={`flex items-center gap-2 sm:gap-2.5 rounded-xl border px-3 py-2.5 sm:px-3.5 sm:py-3 transition-shadow hover:shadow-md ${
         muted
           ? "bg-white border-gray-200"
           : "bg-gray-50 border-gray-200 hover:border-orange-300"
       }`}
     >
-      <Icon className="w-5 h-5 text-orange-600 shrink-0" />
-      <span className="text-[13px] font-semibold text-gray-800">{skill}</span>
+      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600 shrink-0" />
+      <span className="text-[12px] sm:text-[13px] font-semibold leading-tight text-gray-800">{skill}</span>
     </motion.div>
   );
 }
 
 const Skills = () => {
   return (
-    <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14">
+    <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <SectionHeading
         index="02 — Stack"
         title="Skills &"
@@ -93,15 +94,15 @@ const Skills = () => {
               transition={{ duration: 0.5, delay: gi * 0.08 }}
               className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 shadow-sm"
             >
-              <div className="flex items-center gap-2.5">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-2.5">
                 <span
-                  className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
+                  className={`w-fit text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
                     gi === 0 ? "bg-orange-500 text-white" : "bg-white text-gray-600 border border-gray-200"
                   }`}
                 >
                   {gi === 0 ? "Company" : "Personal"}
                 </span>
-                <h3 className="text-[15px] font-bold text-gray-900">{group.title}</h3>
+                <h3 className="text-[15px] font-bold leading-snug text-gray-900">{group.title}</h3>
               </div>
               <p className="text-xs text-gray-500 mt-1.5">{group.subtitle}</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mt-4">
@@ -130,12 +131,14 @@ const Skills = () => {
               }`}
             >
               <div className="flex items-center gap-2">
+                {group.learning && (
+                  <Sparkles className="h-3.5 w-3.5 text-orange-600" aria-hidden="true" />
+                )}
                 <h3
                   className={`text-[13px] font-bold uppercase tracking-wider ${
                     group.learning ? "text-orange-700" : "text-gray-400"
                   }`}
                 >
-                  {group.learning ? "🌱 " : ""}
                   {group.title}
                 </h3>
               </div>
